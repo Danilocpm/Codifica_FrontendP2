@@ -28,6 +28,7 @@ header {
     justify-content: space-between;
     padding: 20px 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
+    z-index: 9999;
 }
 
 .logo img {
@@ -195,12 +196,12 @@ header {
     font-size: 3rem;
     font-weight: 400;
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 0, 0, 0.6);
     transition: 0.3s;
 }
 
 .banner .left .features .pricing ion-icon:hover {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 0, 0, 0.9);
 }
 
 .banner .left .features .content {
@@ -225,4 +226,82 @@ header {
     font-size: 0.7rem;
     text-transform: uppercase;
     font-weight: 400;
+}
+
+.banner .left .features .content .subtitle {
+    color: var(--primary);
+
+}
+
+.banner h1 {
+    color: #ffffff;
+    font-size: 5em;
+    letter-spacing: 5px;
+    line-height: 0.9;
+    font-family: "Bauhaus 93";
+}
+
+.banner img {
+    max-width: 650px;
+    max-height: 650px;
+    width: 50%;
+    height: 50%;
+}
+
+
+.swiper .swiper-wrapper .swiper-slide .banner .right {
+    position: relative;
+    height: 100vh;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 100;
+
+}
+
+.banner .right .description {
+    padding: 30px 60px 0 0;
+    color: #ffffff;
+}
+
+.banner .right .description li {
+    list-style: none;
+
+}
+
+.banner .right .description h4 {
+    display: inline-block;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.banner .right iframe {
+    max-width: 450px;
+    max-height: 255px;
+}
+
+.banner .right .trailer h2 {
+    color:#ffffff;
+
+}
+
+.swiper .swiper-button-prev {
+    position: absolute;
+    left: 86%;
+    top: 45%;
+    width: 54px;
+    height: 54px;
+    border: 1px solid red;
+
+}
+
+.swiper .swiper-button-next {
+    position: absolute;
+    right: 6%;
+    top: 45%;
+    width: 54px;
+    height: 54px;
+    border: 1px solid red;
 }
