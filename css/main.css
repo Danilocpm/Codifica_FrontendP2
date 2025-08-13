@@ -136,6 +136,7 @@ header {
 .swiper .swiper-wrapper .swiper-slide {
     width: 100%;
     height: 100%;
+    position: relative;
 
 }
 
@@ -294,6 +295,8 @@ header {
     width: 54px;
     height: 54px;
     border: 1px solid red;
+    z-index: 1000;
+    cursor: pointer;
 
 }
 
@@ -304,4 +307,6 @@ header {
     width: 54px;
     height: 54px;
     border: 1px solid red;
+    z-index: 1000;
+    cursor: pointer;
 }
