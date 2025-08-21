@@ -6,9 +6,10 @@ import Aplicativo from './components/Produto.jsx'
 import ClassComponent from './components/ClassComponent.jsx'
 import LifeCycleClassComponent from './components/LifeCycleClassComponent.jsx'
 import LifeCycleFunctionalComponent from './components/LifeCycleFunctionalComponent.jsx'
+import SearchComponent from './components/desafio.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LifeCycleFunctionalComponent/>
+    <SearchComponent/>
   </StrictMode>,
 )
