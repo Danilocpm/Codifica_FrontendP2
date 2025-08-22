@@ -8,9 +8,10 @@ import LifeCycleClassComponent from './components/LifeCycleClassComponent.jsx'
 import LifeCycleFunctionalComponent from './components/LifeCycleFunctionalComponent.jsx'
 import SearchComponent from './components/desafio.jsx'
 import ViaCepFunctional from './components/desafioCorrigido.jsx'
+import FormsProduct from './components/formsproduto.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ViaCepFunctional cep={65091020}/>
+    <FormsProduct/>
   </StrictMode>,
 )
