@@ -5,6 +5,8 @@ axios.interceptors.request.use(
     (config) => {
         config.headers['Authorization'] = 'Bearer token123456'
         console.log('Requisicao interceptada, Token adicionado', config)
+
+        return config
     }, (erro) => {
         return Promise.reject(erro)
     }
