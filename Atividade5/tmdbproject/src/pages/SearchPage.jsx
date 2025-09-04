@@ -56,11 +56,11 @@ export const SearchPage = () => {
     };
 
     return (
-        <div>
+        <div className="container mx-auto p-4">
             <SearchBar onSearch={handleSearch} />
-            {loading && <p>Carregando...</p>}
-            {error && <p>{error}</p>}
-            <div className="movie-list">
+            {loading && <p className="text-white text-center mt-4">Carregando...</p>}
+            {error && <p className="text-red-500 text-center mt-4">{error}</p>}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12">
                 {movies.map((movie) => (
                     <MovieCard key={movie.id} movie={movie} onDetails={handleDetails} />
                 ))}

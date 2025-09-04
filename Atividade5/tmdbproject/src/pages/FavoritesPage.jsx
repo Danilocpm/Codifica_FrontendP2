@@ -11,12 +11,12 @@ export const FavoritesPage = () => {
         navigate(`/details/${id}`);
     };
 
-    if (favorites.length === 0) return <p>Você não adicionou nenhum favorito ainda.</p>;
+    if (favorites.length === 0) return <p className="text-white text-center mt-8">Você não adicionou nenhum favorito ainda.</p>;
 
     return (
-        <div>
-            <h2>Meus Favoritos</h2>
-            <div className="movie-list">
+        <div className="container mx-auto p-4">
+            <h2 className="text-2xl font-bold text-white mb-8">Meus Favoritos</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {favorites.map((movie) => (
                     <MovieCard key={movie.id} movie={movie} onDetails={handleDetails} />
                 ))}

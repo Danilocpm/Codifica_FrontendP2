@@ -17,6 +17,7 @@ export const SearchBar = ({ onSearch }) => {
             placeholder="Buscar filmes..."
             value={term}
             onChange={(e) => setTerm(e.target.value)}
+            className="w-full p-2 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
         />
     );
 };
