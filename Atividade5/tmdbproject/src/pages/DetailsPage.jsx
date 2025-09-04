@@ -48,16 +48,27 @@ export const DetailsPage = () => {
     const cast = movie.credits.cast.slice(0, 5);
 
     return (
-        <div className="details-page">
-            <h1>{movie.title} ({movie.release_date?.split("-")[0]})</h1>
-            <img
-                src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : ""}
-                alt={movie.title}
-            />
-            <p><strong>Sinopse:</strong> {movie.overview}</p>
-            <p><strong>Diretor:</strong> {director ? director.name : "N/A"}</p>
-            <p><strong>Atores principais:</strong> {cast.map((a) => a.name).join(", ")}</p>
-            <p><strong>Avaliação:</strong> {movie.vote_average} / 10</p>
+        <div className="container mx-auto p-4 flex gap-6 text-white">
+            <div className="w-1/3">
+                <img
+                    src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : ""}
+                    alt={movie.title}
+                    className="w-full rounded-lg shadow"
+                />
+            </div>
+
+            <div className="w-2/3">
+                <h1 className="text-2xl font-bold mb-4">{movie.title} ({movie.release_date?.split("-")[0]})</h1>
+
+                <div className="space-y-2">
+                    <p><strong>Sinopse:</strong> {movie.overview}</p>
+                    <p><strong>Diretor:</strong> {director ? director.name : "N/A"}</p>
+                    <p><strong>Atores principais:</strong> {cast.map((a) => a.name).join(", ")}</p>
+                    <p><strong>Avaliação:</strong> {movie.vote_average} / 10</p>
+                </div>
+
+            </div>
+
         </div>
     );
 };

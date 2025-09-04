@@ -47,8 +47,10 @@ export const SearchPage = () => {
     }, [fetchMovies]);
 
     const handleSearch = (term) => {
-        setQuery(term);
-        setPage(1); // reset da página ao buscar
+        if (term !== query) {
+            setQuery(term);
+            setPage(1);
+        }
     };
 
     const handleDetails = (id) => {
