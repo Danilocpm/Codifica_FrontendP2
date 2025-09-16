@@ -1,10 +1,15 @@
 .header {
+    border: 1px solid black;
     position: fixed;
     top: 0;
+    inset-inline: 0;
     height: 64px;
     background-color: var(--color-surface);
-    border-bottom: var(--color-border);
+    border-bottom: 1px solid var(--color-border);
     z-index: 100;
+    box-shadow: var(--shadow-sm);
+    
+    
 }
 
 .content {
@@ -32,14 +37,70 @@
 }
 
 .navLinks {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    gap: 10px;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+
+}
+
+.navLink {
     text-decoration: none;
     padding: 6px 10px;
     border-radius: 999px;
     color: var(--color-fg);
     font-weight: 600;
+    transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.navLink:hover {
+    transform: translateY(-1px);
+    background: var(--color-surface-3);
+}
+
+.active {
+  background: var(--color-accent); 
+  color: #fff; 
+}
+
+.themeToggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 10px 0 60px;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 200ms ease, opacity 200ms ease;
+    color: var(--color-fg);
+
 
 }
 
-.navLinks:hover {
-    
+.themeToggle:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
 }
+
+.themeToggle:hover { transform: translateY(-1px); }
+
+.themeText { font-size: 14px; font-weight: 600;}
+
+.themeThumb {
+    position: absolute;
+    left: 6px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: var(--shadow-sm);
+    transition: transform 200ms ease;
+}
+
+:global([data-theme='dark']) .themeThumb { transform: translateX(26px); }
