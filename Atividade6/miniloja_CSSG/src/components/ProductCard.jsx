@@ -1,8 +1,8 @@
 import React from "react";
-import { useCart } from "../hooks/UseCart";
+import { useCart } from "../context/CartContext";
 
 export function ProductCard({ product }) {
-    const { addProduct } = useCart();
+    const { addProduct } = useCart()
 
     return (
         <div className="product-card">
