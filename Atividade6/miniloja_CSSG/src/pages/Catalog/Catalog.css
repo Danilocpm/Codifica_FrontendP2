@@ -1,0 +1,37 @@
+.catalog {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  
+  /* 1. Estilo Padrão (Mobile First) para telas ≤ 480px
+    Por padrão, o grid terá apenas 1 coluna.
+  */
+  grid-template-columns: 1fr;
+}
+
+/* 2. Breakpoint para telas entre 481px e 768px
+  Quando a largura da tela for de no mínimo 481px, o grid muda para 2 colunas.
+*/
+@media (min-width: 481px) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  }
+}
+
+/* 3. Breakpoint para telas entre 769px e 1024px
+  Quando a largura da tela for de no mínimo 769px, o grid muda para 3 colunas.
+*/
+@media (min-width: 769px) {
+  .catalog {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  }
+}
+
+/* 4. Breakpoint para telas ≥ 1025px
+  Quando a largura da tela for de no mínimo 1025px, o grid muda para 4 colunas.
+*/
+@media (min-width: 1025px) {
+  .catalog {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  }
+}

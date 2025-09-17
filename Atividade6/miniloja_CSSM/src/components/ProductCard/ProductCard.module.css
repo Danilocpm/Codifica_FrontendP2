@@ -1,0 +1,134 @@
+.product-card {
+
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background-color: var(--color-surface-2);
+}
+
+
+.product-info {
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+
+    padding: 16px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-fg-strong);
+    margin: 0;
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+.product-rating {
+    font-size: 0.9rem;
+    color: var(--color-fg);
+    margin: 0;
+}
+
+.product-rating::after {
+    content: ' ⭐';
+    color: var(--color-star);
+}
+
+
+.product-tag {
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 4px 0;
+}
+
+
+.product-tag.novo {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+}
+
+.product-tag.oferta {
+    background-color: #e64a19;
+    color: #ffffff;
+}
+
+.product-tag.mais-vendido {
+    background-color: var(--color-star);
+    color: var(--color-fg-strong);
+}
+
+
+.product-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+
+
+    background-color: var(--color-accent);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+
+
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+
+
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.product-button:hover {
+    filter: brightness(1.1);
+}
+
+.product-button:active {
+    transform: scale(0.98);
+}
+
+
+.product-button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+}

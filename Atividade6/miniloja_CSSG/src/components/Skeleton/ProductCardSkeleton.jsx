@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProductCardSkeleton.css"
 
 export function ProductCardSkeleton() {
   return (

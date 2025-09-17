@@ -1,0 +1,74 @@
+/* === Estilos para o Skeleton Loader === */
+
+/* --- Animação de Brilho (Shimmer Effect) --- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* --- Classe base para os blocos do skeleton --- */
+.skeleton-box {
+  /* Cor de fundo base do esqueleto */
+  background-color: var(--color-skeleton);
+  
+  /* Gradiente que cria o efeito de brilho */
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-skeleton-highlight),
+    transparent
+  );
+  
+  /* Tamanho e repetição do gradiente */
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  
+  /* Aplica a animação */
+  animation: shimmer 1.5s infinite linear;
+  
+  border-radius: 6px; /* Cantos arredondados para os blocos */
+}
+
+
+/* --- Ajustes de dimensão para cada bloco do esqueleto --- */
+/* O objetivo é fazer os blocos terem dimensões parecidas com o conteúdo real */
+
+/* A imagem já pega o aspect-ratio da classe .product-image */
+.skeleton .product-image {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skeleton .product-info .skeleton-box {
+  width: 100%; /* Largura padrão, será sobrescrita se necessário */
+  height: 20px; /* Altura padrão para linhas de texto */
+}
+
+.skeleton .product-info .title {
+  height: 24px; /* Título é um pouco maior */
+  width: 80%;
+}
+
+.skeleton .product-info .price {
+  height: 28px; /* Preço é maior e mais destacado */
+  width: 40%;
+}
+
+.skeleton .product-info .rating {
+  width: 60%;
+  height: 18px;
+}
+
+.skeleton .product-info .tag {
+  width: 35%;
+  height: 26px; /* Altura para simular a "pílula" da tag real */
+  border-radius: 20px; /* Mantém o formato de pílula */
+}
+
+.skeleton .product-info .button {
+  height: 44px; /* Altura exata para bater com o botão real (padding + font-size) */
+  border-radius: 8px; /* Mantém o mesmo arredondamento do botão */
+}

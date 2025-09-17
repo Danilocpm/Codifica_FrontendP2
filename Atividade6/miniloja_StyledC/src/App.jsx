@@ -5,8 +5,12 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Catalog } from "./pages/Catalog/Catalog";
 import { Cart } from "./pages/Cart/Cart";
 import { CartProvider } from "./context/CartContext";
-import "./App.css"
+import styled from 'styled-components'
 
+
+const Main = styled.main `
+  padding-top: 80px; 
+`;
 const PRODUCTS = [
   { id: 1, title: 'Fone Bluetooth Pro Max com Cancelamento de Ruído', price: 499.9, rating: 4.6, tag: 'Novo', image: 'https://picsum.photos/seed/prod1/512' },
   { id: 2, title: 'Teclado Mecânico RGB Hot-Swap ABNT2', price: 329.0, rating: 4.8, tag: 'Promo', image: 'https://picsum.photos/seed/prod2/512' },
@@ -22,13 +26,13 @@ function App() {
       <CartProvider>
       <BrowserRouter>
         <NavBar />
-        <main>
+        <Main>
           <Routes>
             <Route path="/" element={<Catalog products={PRODUCTS} />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </main>
+        </Main>
       </BrowserRouter>
       </CartProvider>
     </ThemeProvider>

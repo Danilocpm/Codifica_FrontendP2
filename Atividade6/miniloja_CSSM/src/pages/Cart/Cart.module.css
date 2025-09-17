@@ -1,0 +1,69 @@
+.cart-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cart-page h2 {
+    font-size: 2.5rem;
+    color: var(--color-fg-strong);
+    margin-top: 0;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 1rem;
+}
+
+
+.cart-page>p {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 4rem 2rem;
+    background-color: var(--color-surface-2);
+    border: 1px dashed var(--color-border);
+    border-radius: 12px;
+    color: var(--color-fg);
+}
+
+
+.cart-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+
+.remove-button {
+    width: 90%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+
+
+    background-color: transparent;
+    border: 2px solid #e53e3e;
+    color: #e53e3e;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.remove-button:hover,
+.remove-button:focus-visible {
+    background-color: #e53e3e;
+    color: #ffffff;
+}
+
+
+.remove-button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+}

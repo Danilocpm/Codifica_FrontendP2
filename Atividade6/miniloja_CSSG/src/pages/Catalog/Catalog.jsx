@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { ProductCard } from "../components/ProductCard";
-import { ProductCardSkeleton } from "../components/ProductCardSkeleton";
+import { ProductCard } from "../../components/ProductCard/ProductCard";
+import { ProductCardSkeleton } from "../../components/Skeleton/ProductCardSkeleton";
+import "./Catalog.css"
 
 export function Catalog({ products }) {
   const [loading, setLoading] = useState(true);
